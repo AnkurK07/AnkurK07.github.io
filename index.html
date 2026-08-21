@@ -116,6 +116,60 @@ section{
 
 }
 
+/* ---- Category grid (AI Blogs / Deep Learning / Quantum Computing / Quantum Algorithms) ---- */
+
+.category-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.category-card{
+    background:#1e293b;
+    border-radius:14px;
+    padding:35px 30px;
+    text-decoration:none;
+    color:white;
+    display:block;
+    border:1px solid #1e293b;
+    transition:.3s;
+}
+
+.category-card:hover{
+    transform:translateY(-6px);
+    border-color:#38bdf8;
+    box-shadow:0 10px 25px rgba(56,189,248,.15);
+}
+
+.category-card .cat-icon{
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.category-card h3{
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+.category-card p{
+    color:#94a3b8;
+    line-height:1.6;
+    font-size:15px;
+}
+
+.category-card .cat-arrow{
+    display:inline-block;
+    margin-top:16px;
+    color:#38bdf8;
+    font-weight:bold;
+}
+
+@media (max-width:700px){
+    .category-grid{
+        grid-template-columns:1fr;
+    }
+}
+
 .about p{
 
     line-height:1.8;
@@ -215,79 +269,49 @@ Write about yourself here.
 
 </section>
 
-<!-- BLOGS -->
+<!-- BLOG / TOPIC CATEGORIES -->
+<!--
+Layout (2x2 grid):
+  AI Blogs                | Quantum Computing Blogs
+  Deep Learning From Scratch | Quantum Algorithms
+-->
 
 <section>
 
 <h2 class="section-title">
 
-Latest Technical Blogs
+Explore
 
 </h2>
 
-<div class="blog-card">
+<div class="category-grid">
 
-<h3>
-LLM Inference Engines Explained
-</h3>
-
-<p>
-
-Brief description of your article...
-
-</p>
-
-<a class="read-btn"
-href="AI_Blogs/llm_inference_engines.html">
-
-Read Article →
-
+<a class="category-card" href="AI_Blogs/index.html">
+<div class="cat-icon">🤖</div>
+<h3>AI Blogs</h3>
+<p>Articles on LLMs, inference engines, RAG, vector databases, and distributed ML systems.</p>
+<span class="cat-arrow">Browse Blogs →</span>
 </a>
 
-</div>
-
-<div class="blog-card">
-
-<h3>
-
-Your Next Blog
-
-</h3>
-
-<p>
-
-Add description here...
-
-</p>
-
-<a class="read-btn"
-href="AI_Blogs/blog2.html">
-
-Read Article →
-
+<a class="category-card" href="Quantum_Computing_Blogs/index.html">
+<div class="cat-icon">⚛️</div>
+<h3>Quantum Computing Blogs</h3>
+<p>Articles on quantum computing concepts, hardware, and the state of the field.</p>
+<span class="cat-arrow">Browse Blogs →</span>
 </a>
 
-</div>
+<a class="category-card" href="Deep_Learning_From_Scratch/index.html">
+<div class="cat-icon">🧠</div>
+<h3>Deep Learning From Scratch</h3>
+<p>Step-by-step implementations of deep learning models and architectures, built from first principles in Jupyter notebooks.</p>
+<span class="cat-arrow">View Topics →</span>
+</a>
 
-<div class="blog-card">
-
-<h3>
-
-Your Third Blog
-
-</h3>
-
-<p>
-
-Add description here...
-
-</p>
-
-<a class="read-btn"
-href="AI_Blogs/blog3.html">
-
-Read Article →
-
+<a class="category-card" href="Quantum_Algorithms/index.html">
+<div class="cat-icon">🔬</div>
+<h3>Quantum Algorithms</h3>
+<p>Quantum algorithms implemented and explained from scratch in Jupyter notebooks.</p>
+<span class="cat-arrow">View Topics →</span>
 </a>
 
 </div>
